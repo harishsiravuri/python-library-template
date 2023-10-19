@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "python-library-template"
+version = "0.1.0"
+description = "Template for a python library with automated documentation and pypi publishing"
+authors = ["Harish Varma Siravuri <harish.siravuri@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "python_library_template"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.13"
+pandas = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
